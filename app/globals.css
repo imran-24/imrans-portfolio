@@ -1,0 +1,58 @@
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root{
+    
+    background: #1d1d1d;
+}
+
+@layer components{
+    .heroButton{
+        @apply px-6 py-2 border-[#242424] rounded-full uppercase 
+        text-xs tracking-widest text-gray-500 transition-all border
+        hover:border-rose-400/70 hover:text-rose-300/40 transform
+        cursor-pointer 
+    }
+    .title{
+        @apply uppercase tracking-[8px] sm:tracking-[15px] text-gray-500 text-sm
+    }
+    .input{
+        @apply  w-full
+        p-3
+        border-2
+        border-neutral-800
+        rounded-lg
+        bg-black
+        bg-opacity-10
+        outline-none
+        focus:border-rose-500/50
+        focus:border-2
+        text-white
+        disabled:bg-neutral-900
+        disabled:cursor-not-allowed
+        disabled:opacity-70
+
+    }
+    .submitBtn{
+        @apply disabled:opacity-70
+        disabled:cursor-not-allowed
+        rounded-lg
+        font-semibold
+        hover:opacity-80
+        transition
+        border-2
+        w-full
+        bg-rose-500/50
+        border-white/30
+        text-sm
+        px-5
+        py-3
+        text-white
+    }
+}
