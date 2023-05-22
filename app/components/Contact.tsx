@@ -45,7 +45,7 @@ const Contact = () => {
           sm:mt-0
           sm:gap-10">
             <h1 className="text-xl sm:text-2xl font-semibold  sm:font-bold text-white ">
-              I have got just what you need. Let's talk
+              I have got just what you need. Let&apos;'s talk
             </h1>
 
             <div className='space-y-2 sm:space-y-4'>
