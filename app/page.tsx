@@ -22,8 +22,11 @@ export default async function Home() {
   const socials = await fetchSocials()
   const skills = await fetchSkills()
   const projects = await fetchProjects()
-
-
+  console.log(pageInfo)
+  console.log(socials)
+  console.log(skills)
+  console.log(projects)
+  
   return (
     <div className='w-full h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-rose-500/50'>
       
