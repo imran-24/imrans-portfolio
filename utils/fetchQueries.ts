@@ -3,7 +3,7 @@ import { PageInfo, Project, Skill, Social } from "@/typings"
 
 export const fetchSocials = async() => {
     const res = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/social`, { next: {revalidate: 10}})
-    if (res.ok) {
+    if (!res.ok) {
         throw new Error('Network response was not ok');
     }
     const data = await res.json()
@@ -13,7 +13,7 @@ export const fetchSocials = async() => {
 
 export const fetchSkills = async() => {
     const res = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/skill`, { next: {revalidate: 10}})
-    if (res.ok) {
+    if (!res.ok) {
         throw new Error('Network response was not ok');
     }
     const data = await res.json()
@@ -23,7 +23,7 @@ export const fetchSkills = async() => {
 
 export const fetchProjects = async() => {
     const res = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/projects`, { next: {revalidate: 10}})
-    if (res.ok) {
+    if (!res.ok) {
         throw new Error('Network response was not ok');
     }
     const data = await res.json()
@@ -33,7 +33,7 @@ export const fetchProjects = async() => {
 
 export const fetchPageInfo = async() => {
     const res = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/pageInfo`, { next: {revalidate: 10}})
-    if (res.ok) {
+    if (!res.ok) {
         throw new Error('Network response was not ok');
     }
     const data = await res.json()
