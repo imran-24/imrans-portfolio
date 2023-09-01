@@ -1,8 +1,11 @@
+import getDomain from "@/app/libs/getDomain";
 import { PageInfo, Project, Skill, Social } from "@/typings"
 
+const domain = getDomain();
 
 export const fetchSocials = async() => {
-    const res = await fetch(`http://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/social`, { cache: "no-store"})
+    const endpoint = `${domain}/api/social`
+    const res = await fetch(endpoint, { cache: "no-store"})
     
     if (!res.ok) {
         throw new Error('Network response was not ok');
@@ -16,7 +19,8 @@ export const fetchSocials = async() => {
 }
 
 export const fetchSkills = async() => {
-    const res = await fetch(`http://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/skill`, { cache: "no-store"})
+    const endpoint = `${domain}/api/skill`
+    const res = await fetch(endpoint, { cache: "no-store"})
     if (!res.ok) {
         throw new Error('Network response was not ok');
     }
@@ -29,7 +33,8 @@ export const fetchSkills = async() => {
 }
 
 export const fetchProjects = async() => {
-    const res = await fetch(`http://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/projects`, { cache: "no-store"})
+    const endpoints = `${domain}/api/projects`
+    const res = await fetch(endpoints, { cache: "no-store"})
     if (!res.ok) {
         throw new Error('Network response was not ok');
     }
@@ -42,7 +47,8 @@ export const fetchProjects = async() => {
 }
 
 export const fetchPageInfo = async() => {
-    const res = await fetch(`http://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/pageInfo`, { cache: "no-store"})
+    const endpoint = `${domain}/api/pageInfo`
+    const res = await fetch(endpoint, { cache: "no-store"})
     if (!res.ok) {
         throw new Error('Network response was not ok');
     }  
