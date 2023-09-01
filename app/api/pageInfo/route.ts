@@ -9,8 +9,12 @@ const query = groq`
 `
 
 export async function GET(request: Request) {
-
-  const pageInfo: PageInfo = await client.fetch(query)
-  return NextResponse.json({pageInfo: pageInfo})
+  try{
+    const pageInfo: PageInfo = await client.fetch(query)
+    return NextResponse.json({pageInfo: pageInfo})
+  }catch(e){
+    return NextResponse.error();
+  }
+  
 
 }

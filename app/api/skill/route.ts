@@ -9,8 +9,12 @@ const query = groq`
 `
 
 export async function GET(request: Request) {
-
-  const skills: Skill[]  = await client.fetch(query)
-  return NextResponse.json({skills: skills})
+  
+  try{
+    const skills: Skill[]  = await client.fetch(query)
+    return NextResponse.json({skills: skills})
+  }catch(e){
+    return NextResponse.error();
+  }
 
 }

@@ -9,8 +9,10 @@ const query = groq`
 `
 
 export async function GET(request: Request) {
-
-  const socials: Social[]  = await client.fetch(query)
+  try{
+    const socials: Social[]  = await client.fetch(query)
   return NextResponse.json({socials: socials})
-
+  }catch(e){
+    return NextResponse.error();
+  }
 }

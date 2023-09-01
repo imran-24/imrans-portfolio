@@ -13,7 +13,12 @@ const query = groq`
 
 export async function GET(request: Request) {
 
-  const projects: Project[]  = await client.fetch(query)
+  try{
+    const projects: Project[]  = await client.fetch(query)
   return NextResponse.json({projects: projects})
+  }catch(e){
+    return NextResponse.error();
+  }
+  
 
 }
