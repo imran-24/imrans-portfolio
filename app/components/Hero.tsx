@@ -5,7 +5,7 @@ import { PageInfo } from '@/typings'
 import { urlFor } from '@/utils/client'
 
 type Props={
-  pageInfo: PageInfo
+  pageInfo: PageInfo | undefined | null
 }
 
 const Hero = ({pageInfo}: Props) => {
@@ -16,6 +16,9 @@ const Hero = ({pageInfo}: Props) => {
     loop: true,
     delaySpeed: 2000
   })
+
+  if(!pageInfo) return null;
+  
   return (
     <div 
       className='

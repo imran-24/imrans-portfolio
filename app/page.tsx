@@ -18,25 +18,25 @@ const inter = Inter({ subsets: ['latin'] })
 export default async function Home() {
 
   // static data 
-  const pageInfo: PageInfo = await fetchPageInfo()
-  const socials: Social[] = await fetchSocials()
-  const skills: Skill[] = await fetchSkills()
-  const projects: Project[] = await fetchProjects()
+  const pageInfo = await fetchPageInfo()
+  // const socials = await fetchSocials()
+  // const skills = await fetchSkills()
+  // const projects = await fetchProjects()
 
 
   return (
     <div className='w-full h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-rose-500/50'>
       
-      <Header 
+      {/* <Header 
       socials={socials} 
-      />
+      /> */}
       <section className='snap-center' id='hero'>
         <Hero pageInfo={pageInfo}/>
       </section>
-      <section className='snap-center' id='about'>
+      {/* <section className='snap-center' id='about'>
         <About pageInfo={pageInfo} />
       </section>
-      {/* <Experience /> */}
+      
       <section className='snap-center' id='skills'>
         <Skills skills={skills}/>
       </section>
@@ -45,7 +45,7 @@ export default async function Home() {
       </section>
       <section className='snap-center' id='contact'>
         <Contact />
-      </section>
+      </section> */}
 
       
         <footer className='sticky bottom-5 w-full cursor-pointer z-50'>
