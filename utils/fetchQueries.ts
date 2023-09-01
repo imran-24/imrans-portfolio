@@ -2,7 +2,7 @@ import { PageInfo, Project, Skill, Social } from "@/typings"
 
 
 export const fetchSocials = async() => {
-    const res = await fetch(`http://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/social`)
+    const res = await fetch(`http://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/social`, { cache: "no-store"})
     
     if (!res.ok) {
         throw new Error('Network response was not ok');
@@ -16,7 +16,7 @@ export const fetchSocials = async() => {
 }
 
 export const fetchSkills = async() => {
-    const res = await fetch(`http://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/skill`)
+    const res = await fetch(`http://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/skill`, { cache: "no-store"})
     if (!res.ok) {
         throw new Error('Network response was not ok');
     }
@@ -29,7 +29,7 @@ export const fetchSkills = async() => {
 }
 
 export const fetchProjects = async() => {
-    const res = await fetch(`http://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/projects`)
+    const res = await fetch(`http://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/projects`, { cache: "no-store"})
     if (!res.ok) {
         throw new Error('Network response was not ok');
     }
@@ -42,7 +42,7 @@ export const fetchProjects = async() => {
 }
 
 export const fetchPageInfo = async() => {
-    const res = await fetch(`http://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/pageInfo`)
+    const res = await fetch(`http://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/pageInfo`, { cache: "no-store"})
     if (!res.ok) {
         throw new Error('Network response was not ok');
     }  
