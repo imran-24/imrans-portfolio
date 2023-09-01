@@ -19,7 +19,11 @@ const Skills = ({skills}: Props) => {
           justify-center
           ">
           <div
-            className="grid grid-cols-3 sm:grid-cols-4 gap-2 sm:gap-5">
+            className="
+            grid
+            grid-cols-4 
+            gap-2 
+            sm:gap-5">
               {
                 skills.slice(0, skills.length / 2).map(skill =>(
                   <SkillCircle key={skill?._id} skill={skill} />

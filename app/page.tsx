@@ -11,6 +11,7 @@ import Contact from './components/Contact'
 import { fetchPageInfo, fetchProjects, fetchSkills, fetchSocials } from '@/utils/fetchQueries'
 import { PageInfo, Project, Skill, Social } from '@/typings'
 
+import footerImage from '../public/images/footer.jpg'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -50,7 +51,7 @@ export default async function Home() {
         <footer className='sticky bottom-5 w-full cursor-pointer z-50'>
         <div className=' w-full'>
         <a href='/#hero'>
-          <img className='h-10 w-10 hover:opacity-50 cursor-pointer object-cover rounded-full mx-auto' src="https://scontent.fdac5-1.fna.fbcdn.net/v/t1.6435-9/170259179_2838121309788621_2428918469295411001_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEEv2Q7Ufs4RFuRX7sfematdJ0kGORJYJZ0nSQY5Elgln-PMHjYYrxsysFHIUFVxVJInhyrsxb50itMFFt2-tfy&_nc_ohc=a8PXwIOKk3YAX-svJgH&_nc_ht=scontent.fdac5-1.fna&oh=00_AfBtH7fXNr8L-DQNfwM-Zs46KvI1MIjG_OG2SSE4jQEO0w&oe=648DFBAA" alt="" />
+          <img className='h-10 w-10 hover:opacity-50 cursor-pointer object-cover rounded-full mx-auto' src={footerImage.src} alt="" />
         </a>
         </div>
         </footer>

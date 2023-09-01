@@ -16,7 +16,7 @@ type Inputs = {
 const Contact = () => {
   const { register, handleSubmit} = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = data => {
-    window.location.href = `mailto:md.imransyam1956@gmail?subject=${data.subject}&body=Hi, my name is ${data.name}, ${data.message}} ${data.email}`
+    window.location.href = `mailto:md.imransyam1956@gmail?subject=${data.subject}&body=Hi, my name is ${data.name}, ${data.message}.`
   };
   return (
     <div className="h-screen relative overflow-hidden px-10 md:px-20">
