@@ -13,7 +13,7 @@ const SkillCircle: React.FC<SkillProps> = ({directionLeft, skill}) => {
   return (
     <motion.div
         initial={{
-            x: directionLeft ? -150 :  150,
+            x: directionLeft ? -100 :  100,
             opacity: 0
         }}
         transition={{

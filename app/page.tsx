@@ -22,13 +22,10 @@ export default async function Home() {
   const socials = await fetchSocials()
   const skills = await fetchSkills()
   const projects = await fetchProjects()
-  console.log(pageInfo)
-  console.log(socials)
-  console.log(skills)
-  console.log(projects)
+  
 
   return (
-    <div className='w-full h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-rose-500/50'>
+    <div className='w-full relative h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-rose-500/50'>
       
       <Header 
       socials={socials} 
@@ -51,14 +48,12 @@ export default async function Home() {
       </section>
 
       
-        <footer className='sticky bottom-5 w-full cursor-pointer z-50'>
-        <div className=' w-full'>
-          <button className='h-10 w-10 m-auto'>
+        <footer className='sticky bottom-5 inset-x-0 m-auto h-10 w-10 rounded-full cursor-pointer z-50'>
+          
           <a href='/#hero'>
-            <img className='h-10 w-10 hover:opacity-50 cursor-pointer object-cover rounded-full' src={footerImage.src} alt="" />
+            <img className='h-10 w-10 bg-red-500 hover:opacity-50 cursor-pointer object-cover rounded-full' src={footerImage.src} alt="" />
           </a>
-          </button>
-        </div>
+          
         </footer>
       
 
