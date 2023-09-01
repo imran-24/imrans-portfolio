@@ -26,7 +26,7 @@ export default async function Home() {
   console.log(socials)
   console.log(skills)
   console.log(projects)
-  
+
   return (
     <div className='w-full h-screen snap-y snap-mandatory overflow-x-hidden overflow-y-scroll scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-rose-500/50'>
       
@@ -53,9 +53,11 @@ export default async function Home() {
       
         <footer className='sticky bottom-5 w-full cursor-pointer z-50'>
         <div className=' w-full'>
-        <a href='/#hero'>
-          <img className='h-10 w-10 hover:opacity-50 cursor-pointer object-cover rounded-full mx-auto' src={footerImage.src} alt="" />
-        </a>
+          <div className='h-10 w-10 m-auto'>
+          <a href='/#hero'>
+            <img className='h-10 w-10 hover:opacity-50 cursor-pointer object-cover rounded-full' src={footerImage.src} alt="" />
+          </a>
+          </div>
         </div>
         </footer>
       

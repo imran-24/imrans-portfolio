@@ -24,7 +24,7 @@ const SkillCircle: React.FC<SkillProps> = ({directionLeft, skill}) => {
             x: 0
         }}>
         <img
-         className='h-12 w-12 sm:h-16 sm:w-16 rounded-full bg-neutral-700/20 hover:bg-neutral-400/80 transition border-[1px] border-neutral-500/50 p-2 object-contain object-center'
+         className='h-10 w-10 sm:h-16 sm:w-16 rounded-full bg-neutral-700/20 hover:bg-neutral-400/80 transition border-[1px] border-neutral-500/50 p-2 object-contain object-center'
         src={urlFor(skill?.image).url()}
         alt=''
         />
