@@ -5,10 +5,11 @@ import { urlFor } from '@/utils/client'
 import {motion} from 'framer-motion'
 
 type Props={
-  projects: Project[]
+  projects: Project[] | null
 }
 const Projects = ({projects}: Props) => {
   
+  if(!projects) return null
   return (
     <div className="h-screen  relative overflow-hidden ">
       <h1 className="title mt-20 absolute px-20">Projects</h1>

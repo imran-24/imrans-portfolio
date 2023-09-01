@@ -37,12 +37,13 @@ const items = [
 ]
 
 type Props = {
-  socials: Social[]
+  socials: Social[] | null
 }
 
 const Header = ({socials}: Props) => {
   const router = useRouter()
 
+  if(!socials) return null
   return (
     <header className="sticky top-0 z-50 px-6  flex items-center justify-between gap-3 mx-auto max-w-6xl">
       <motion.div 

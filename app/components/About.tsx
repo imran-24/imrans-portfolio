@@ -5,9 +5,11 @@ import { urlFor } from '@/utils/client'
 import {motion} from 'framer-motion'
 
 type Props={
-  pageInfo: PageInfo
+  pageInfo: PageInfo | null
 }
 const About = ({pageInfo}: Props) => {
+
+  if(!pageInfo) return null
   return (
     <motion.div
       initial={{

@@ -4,10 +4,11 @@ import { Skill } from "@/typings"
 import SkillCircle from "./SkillCircle" 
 
 type Props={
-  skills: Skill[]
+  skills: Skill[] | null
 }
 
 const Skills = ({skills}: Props) => {
+  if(!skills) return null
   return (
     <div className="h-screen relative overflow-hidden px-8 sm:px-20 ">
       <h1 className="title mt-20 absolute ">Skills</h1>
