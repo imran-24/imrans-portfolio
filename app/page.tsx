@@ -53,11 +53,11 @@ export default async function Home() {
       
         <footer className='sticky bottom-5 w-full cursor-pointer z-50'>
         <div className=' w-full'>
-          <div className='h-10 w-10 m-auto'>
+          <button className='h-10 w-10 m-auto'>
           <a href='/#hero'>
             <img className='h-10 w-10 hover:opacity-50 cursor-pointer object-cover rounded-full' src={footerImage.src} alt="" />
           </a>
-          </div>
+          </button>
         </div>
         </footer>
       
