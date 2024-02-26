@@ -1,3 +1,4 @@
+import experience from "./experience";
 import pageInfo from "./pageInfo";
 import project from "./project";
 import skill from "./skill";
@@ -7,5 +8,6 @@ export const schemaTypes = [
     social,
     project,
     skill,
+    experience,
     pageInfo
 ]
