@@ -22,18 +22,34 @@ const About = ({pageInfo}: Props) => {
       whileInView={{
         opacity: 1.5
       }}
-      className="h-screen relative overflow-hidden px-8 sm:px-20">
+      className="
+      h-screen 
+      flex 
+      relative 
+      overflow-hidden 
+      flex-col 
+      space-y-5 
+      w-full 
+      md:max-w-6xl 
+      mx-auto 
+      px-10  
+      justfy-center
+      items-center">
       {/* title */}
-      <h1 className="title mt-20 absolute ">About</h1>
+      <h1 className="title">About</h1>
       <div 
         className="
-          h-full
+          w-full
+          flex-1
           flex 
           flex-col 
-          md:flex-row
+          lg:flex-row
           items-center
+          lg:justify-between
           justify-center
-          gap-10">
+          space-y-10
+          space-x-10
+          ">
            
             {/* image */}
             <motion.img 
@@ -48,13 +64,13 @@ const About = ({pageInfo}: Props) => {
                   opacity: 1,
                   x: 0
                 }}
-                viewport={{ once: true}}
+                // viewport={{ once: true}}
                 className='
                   rounded-full 
                   object-center 
                   object-cover 
                   h-40 w-40
-                  md:rounded-md
+                  lg:rounded-md
                   lg:h-[450px] lg:w-[300px]
                   ' 
                   src={urlFor(pageInfo?.profilePic).url()} alt=""

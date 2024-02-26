@@ -19,9 +19,18 @@ const Contact = () => {
     window.location.href = `mailto:md.imransyam1956@gmail?subject=${data.subject}&body=Hi, my name is ${data.name}, ${data.message}.`
   };
   return (
-    <div className="h-screen relative overflow-hidden px-10 md:px-20">
+    <div className="
+    h-screen 
+    flex 
+    relative 
+    overflow-hidden 
+    flex-col 
+    w-full 
+    md:max-w-6xl 
+    mx-auto 
+    px-10  ">
     {/* title */}
-    <h1 className="title mt-20 absolute ">contact</h1>
+    <h1 className="title">contact</h1>
       <motion.div 
         initial={{
           opacity: 0,
@@ -40,12 +49,9 @@ const Contact = () => {
           flex-col 
           items-center
           justify-center
-          gap-4
-          mt-4
-          sm:mt-0
-          sm:gap-10">
-            <h1 className="text-xl sm:text-2xl font-semibold  sm:font-bold text-white ">
-              I have got just what you need. Let&apos;'s talk
+          sm:space-y-4">
+            <h1 className="text-lg sm:text-xl font-semibold  sm:font-bold text-white ">
+              I have got just what you need. Let&apos;s talk
             </h1>
 
             <div className='space-y-2 sm:space-y-4'>

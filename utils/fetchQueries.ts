@@ -5,7 +5,7 @@ const domain = getDomain();
 
 export const fetchSocials = async() => {
     const endpoint = `${domain}/api/social`
-    const res = await fetch(endpoint, { cache: "no-store"})
+    const res = await fetch(endpoint, { cache: "no-cache"})
     
     if (!res.ok) {
         throw new Error('Network response was not ok');
@@ -20,7 +20,7 @@ export const fetchSocials = async() => {
 
 export const fetchSkills = async() => {
     const endpoint = `${domain}/api/skill`
-    const res = await fetch(endpoint, { cache: "no-store"})
+    const res = await fetch(endpoint, { cache: "no-cache"})
     if (!res.ok) {
         throw new Error('Network response was not ok');
     }
@@ -34,7 +34,7 @@ export const fetchSkills = async() => {
 
 export const fetchProjects = async() => {
     const endpoints = `${domain}/api/projects`
-    const res = await fetch(endpoints, { cache: "no-store"})
+    const res = await fetch(endpoints, { cache: "no-cache"})
     if (!res.ok) {
         throw new Error('Network response was not ok');
     }
@@ -48,7 +48,7 @@ export const fetchProjects = async() => {
 
 export const fetchPageInfo = async() => {
     const endpoint = `${domain}/api/pageInfo`
-    const res = await fetch(endpoint, { cache: "no-store"})
+    const res = await fetch(endpoint, { cache: "no-cache"})
     if (!res.ok) {
         throw new Error('Network response was not ok');
     }  

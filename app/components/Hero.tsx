@@ -3,6 +3,7 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles'
 import { PageInfo } from '@/typings'
 import { urlFor } from '@/utils/client'
+import Image from 'next/image'
 
 type Props={
   pageInfo: PageInfo | undefined | null
@@ -33,8 +34,8 @@ const Hero = ({pageInfo}: Props) => {
       </div>
       
       <div className=' flex flex-col items-center gap-3 justify-center mt-36'>
-        <img className='h-32 w-32 object-cover rounded-full' src={urlFor(pageInfo?.heroImage).url()} alt="" />
-        <h1 className='title '>{pageInfo?.role}</h1>
+        <Image width={100} height={100} className='object-center object-contain rounded-full' src={urlFor(pageInfo?.heroImage).url()} alt="" />
+        <h1 className='uppercase tracking-[8px] sm:tracking-[15px] text-gray-500 text-sm  '>{pageInfo?.role}</h1>
       </div>
       
       <div className=' flex font-bold text-[1.6rem] sm:text-4xl'>
@@ -55,9 +56,12 @@ const Hero = ({pageInfo}: Props) => {
             
             </button>
         
-        {/* <a href='experience'>
-          <button className='heroButton' type='button' >Experience</button>
-        // </a> */}
+        
+        <button className='heroButton' type='button' >
+          <a href='/#experience'>
+            Experience
+          </a>
+        </button>
        
           <button className='heroButton' type='button' >
           <a href='/#skills'>

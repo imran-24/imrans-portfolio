@@ -7,9 +7,9 @@ import Experience from './components/Experience'
 import Skills from './components/skills/Skills'
 import Projects from './components/projects/Projects'
 import Contact from './components/Contact'
+import Link from 'next/link';
 
 import { fetchPageInfo, fetchProjects, fetchSkills, fetchSocials } from '@/utils/fetchQueries'
-import { PageInfo, Project, Skill, Social } from '@/typings'
 
 import footerImage from '../public/images/footer.jpg'
 
@@ -33,6 +33,7 @@ export default async function Home() {
       <section className='snap-center' id='hero'>
         <Hero pageInfo={pageInfo}/>
       </section>
+
       <section className='snap-center' id='about'>
         <About pageInfo={pageInfo} />
       </section>
@@ -40,6 +41,11 @@ export default async function Home() {
       <section className='snap-center' id='skills'>
         <Skills skills={skills}/>
       </section>
+
+      <section className='snap-center' id='hero'>
+        <Experience />
+      </section>
+      
       <section className='snap-center' id='projects'>
         <Projects projects={projects}/>
       </section>
@@ -48,13 +54,13 @@ export default async function Home() {
       </section>
 
       
-        <footer className='sticky bottom-5 inset-x-0 m-auto h-10 w-10 rounded-full cursor-pointer z-50'>
-          
-          <a href='/#hero'>
-            <img className='h-10 w-10 bg-red-500 hover:opacity-50 cursor-pointer object-cover rounded-full' src={footerImage.src} alt="" />
-          </a>
-          
-        </footer>
+      <footer className='sticky bottom-5 inset-x-0 m-auto h-10 w-10 rounded-full cursor-pointer z-50'>
+        
+        <Link href='/#hero'>
+          <Image height={30} width={30} className='hover:opacity-50 cursor-pointer object-cover rounded-full' src={footerImage.src} alt="" />
+        </Link>
+        
+      </footer>
       
 
     </div>

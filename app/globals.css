@@ -20,7 +20,7 @@ body,
         cursor-pointer 
     }
     .title{
-        @apply uppercase tracking-[8px] sm:tracking-[15px] text-gray-500 text-sm
+        @apply uppercase tracking-[8px] sm:tracking-[15px] text-gray-500 text-sm pt-20   w-full
     }
     .input{
         @apply  w-full

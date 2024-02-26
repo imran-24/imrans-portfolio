@@ -10,14 +10,27 @@ type Props={
 const Skills = ({skills}: Props) => {
   if(!skills) return null
   return (
-    <div className="h-screen relative overflow-hidden px-8 sm:px-20 ">
-      <h1 className="title mt-20 absolute ">Skills</h1>
+    <div className="
+      h-screen 
+      flex 
+      relative 
+      overflow-hidden 
+      flex-col 
+      space-y-5 
+      w-full 
+      md:max-w-6xl 
+      mx-auto 
+      px-10  
+      justfy-center
+      items-center">
+      <h1 className="title">Skills</h1>
       <div 
         className="
-          h-full
+          w-full
           flex
           items-center
           justify-center
+          flex-1
           ">
           <div
             className="

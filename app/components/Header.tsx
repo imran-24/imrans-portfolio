@@ -45,7 +45,7 @@ const Header = ({socials}: Props) => {
 
   if(!socials) return null
   return (
-    <header className="sticky top-0 z-50 px-6  flex items-center justify-between gap-3 mx-auto max-w-6xl">
+    <header className="sticky top-0 z-50 px-8  flex items-center justify-between gap-3 mx-auto max-w-6xl">
       <motion.div 
         initial={{
           x: -500,
