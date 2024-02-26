@@ -28,12 +28,10 @@ const About = ({pageInfo}: Props) => {
       relative 
       overflow-hidden 
       flex-col 
-      space-y-5 
       w-full 
       md:max-w-6xl 
       mx-auto 
       px-10  
-      justfy-center
       items-center">
       {/* title */}
       <h1 className="title">About</h1>
@@ -46,7 +44,9 @@ const About = ({pageInfo}: Props) => {
           lg:flex-row
           items-center
           lg:justify-between
-          justify-center
+          mt-20
+          lg:mt-0
+          justify-start
           space-y-10
           space-x-10
           ">
@@ -64,7 +64,7 @@ const About = ({pageInfo}: Props) => {
                   opacity: 1,
                   x: 0
                 }}
-                // viewport={{ once: true}}
+                viewport={{ once: true}}
                 className='
                   rounded-full 
                   object-center 
@@ -80,7 +80,7 @@ const About = ({pageInfo}: Props) => {
               <h4 className='text-amber-500/80 text-[1.7rem] sm:text-3xl font-semibold text-center md:text-left'>
                 Here is a <span className='underline decoration-rose-500/30 '>little</span> about me
               </h4>
-              <p className='text-sm font-light max-w-2xl text-white/20 tracking-widest'>
+              <p className='text-sm  max-w-2xl text-white tracking-widest'>
                 {pageInfo?.backgroundInfo}
               </p>
             </div>

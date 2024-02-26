@@ -1,5 +1,5 @@
 import getDomain from "@/app/libs/getDomain";
-import { PageInfo, Project, Skill, Social } from "@/typings"
+import { Experience, PageInfo, Project, Skill, Social } from "@/typings"
 
 const domain = getDomain();
 
@@ -31,6 +31,21 @@ export const fetchSkills = async() => {
     const skills: Skill[] = data.skills
     return skills
 }
+
+export const fetchExperiences = async () => {
+  const endpoints = `${domain}/api/experience`;
+  const res = await fetch(endpoints, { cache: "no-cache" });
+  if (!res.ok) {
+    throw new Error("Network response was not ok");
+  }
+  if (res.headers.get("content-type") !== "application/json") {
+    return null;
+  }
+  const data = await res.json();
+  const experience: Experience[] = data.experiences;
+
+  return experience;
+};
 
 export const fetchProjects = async() => {
     const endpoints = `${domain}/api/projects`

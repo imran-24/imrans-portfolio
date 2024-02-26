@@ -38,7 +38,7 @@ const Hero = ({pageInfo}: Props) => {
         <h1 className='uppercase tracking-[8px] sm:tracking-[15px] text-gray-500 text-sm  '>{pageInfo?.role}</h1>
       </div>
       
-      <div className=' flex font-bold text-[1.6rem] sm:text-4xl'>
+      <div className=' flex font-bold text-[1.6rem] sm:text-4xl z-[99999]'>
         <h1 className='text-rose-500 '>
           <span>
             {text}
@@ -47,7 +47,7 @@ const Hero = ({pageInfo}: Props) => {
         <Cursor cursorColor='white' />
       </div>
 
-      <div className='flex items-center justify-between z-20'>  
+      <div className='flex items-center justify-between z-[99999]'>  
         
           <button className='heroButton' type='button' >
             <a href='/#about'>
@@ -55,25 +55,24 @@ const Hero = ({pageInfo}: Props) => {
             </a>
             
             </button>
-        
-        
-        <button className='heroButton' type='button' >
-          <a href='/#experience'>
-            Experience
-          </a>
-        </button>
        
-          <button className='heroButton' type='button' >
-          <a href='/#skills'>
-              Skills
+            <button className='heroButton' type='button' >
+            <a href='/#skills'>
+                Skills
+              </a>
+            </button>
+
+            <button className='heroButton' type='button' >
+            <a href='/#experiences'>
+              Experience
             </a>
           </button>
-        
-          <button className='heroButton' type='button' >
-          <a href='/#projects'>
-              Projects
-            </a>
-          </button>
+          
+            <button className='heroButton' type='button' >
+            <a href='/#projects'>
+                Projects
+              </a>
+            </button>
     
       </div>
 

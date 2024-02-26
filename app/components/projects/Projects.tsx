@@ -81,7 +81,7 @@ const Projects = ({projects}: Props) => {
                     opacity: 1
                   }}
                   viewport={{once: true}}
-                  className="max-w-[350px] sm:max-w-[450px] object-contain ease-out  rounded-lg shadow"
+                  className="max-w-[400px] sm:max-w-[500px] object-contain ease-out  rounded-lg shadow"
                   src={project?.image && urlFor(project.image).url()}
                   alt="" />
                   <div className="space-y-6 max-w-[600px]">
@@ -99,7 +99,7 @@ const Projects = ({projects}: Props) => {
                         .map(tech =>(
                           <div
                           key={tech?._id} 
-                          className='relative bg-neutral-500/70 rounded-md  w-[30px] h-[30px]'>
+                          className='relative bg-neutral-500/70 rounded-full  w-[30px] h-[30px]'>
                             <Image 
                             fill
                             className='overflow-hidden object-contain object-center' 
@@ -108,12 +108,12 @@ const Projects = ({projects}: Props) => {
                         ))
                       }
                       </div>
-                      <div className="space-y-4 text-white/70 max-w-[350px] sm:max-w-[450px]">
+                      <div className="space-y-4 text-white/50 max-w-[400px] sm:max-w-[500px]">
                         <p className="tracking-tightest line-6">
                         {project?.summary}
                         </p>
                         <div className='text-white'>
-                          <span className="text-rose-500/50 font-bold">Demo: </span>
+                          <span className="text-rose-500/50   font-bold">Demo: </span>
                           <Link className='hover:underline  hover:text-white' href={project.linkToBuild}>{project?.linkToBuild}</Link>
                         </div>
                       </div>
